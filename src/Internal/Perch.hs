@@ -318,6 +318,13 @@ goParent ch pe = Perch $ \e ->
      pr <- parent fs
      build pe pr
 
+goLastChild :: Perch -> Perch -> Perch
+goLastChild ch pe = Perch $ \e ->
+  do fs <- build ch e
+     pr <- lastChild fs
+     build pe pr
+
+
 -- ** Manipulation
 
 -- | Delete the current node and return the parent.

@@ -23,7 +23,8 @@ module GHCJS.Perch
   , NamedEvent (..)
   , JsEvent (..)
     -- * Internal API
-  , module Internal.API )
+  , module Internal.API
+  , Elem(..))
   where
 
 import           Internal.API

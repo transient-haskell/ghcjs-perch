@@ -44,6 +44,9 @@ foreign import javascript unsafe
 
 foreign import javascript unsafe "$1.parentNode"
   js_parentNode :: JSVal -> IO JSVal
+  
+foreign import javascript unsafe "$1.lastChild"
+  js_lastChild :: JSVal -> IO JSVal
 
 foreign import javascript unsafe "$1.appendChild($2)"
   js_appendChild :: JSVal -> JSVal -> IO ()

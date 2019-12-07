@@ -63,6 +63,14 @@ parent (Elem c) = Elem <$> js_parentNode c
 parent = notImplemented
 #endif
 
+lastChild :: Elem -> IO Elem
+#ifdef ghcjs_HOST_OS
+lastChild (Elem c) = Elem <$> js_lastChild c
+#else
+lastChild = notImplemented
+#endif
+
+
 -- | Appends one element to another.
 addChild :: Elem -- ^ child element to append
          -> Elem -- ^ parent element
